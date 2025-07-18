@@ -158,7 +158,7 @@ def install_autogen():
     """ติดตั้ง AutoGen - เครื่องมือสำหรับสร้าง AI agents ที่สามารถทำงานร่วมกันได้"""
     print_step("ติดตั้ง Microsoft AutoGen")
     try:
-        result = run_command("docker exec -it my-openhands-app pip install pyautogen")
+        result = run_command("docker exec -it my-openhands-app pip install ag2")
         if result:
             print_success("ติดตั้ง Microsoft AutoGen สำเร็จ")
             return True
@@ -435,7 +435,7 @@ setup(
         "datasets",
         "tokenizers",
         "llama-index",
-        "pyautogen",
+        "ag2",
         "gpt4all",
         "torch",
         "torchvision",
